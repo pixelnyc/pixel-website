@@ -1,0 +1,34 @@
+= simple_form_for [:backend, @project], html: { class: 'form panel form-vertical' }, wrapper: :vertical_form do |f|
+  .panel-body
+
+    = f.input :name, placeholder: 'Name'
+    = f.input :description, as: :text, placeholder: 'Link to page'
+    = f.input :virtual_services, as: :array, label: 'Services',
+              hint: 'One service per line'
+    = f.input :link, label: 'Project web-link'
+
+    h3 Images & Videos
+    hr.mnr-md.mnl-md
+    = f.input :tile_cover, as: :image_preview, hint: 'Resolution - 600x600', input_html: {preview_version: :backend_thumb}
+    = f.input :cover, as: :image_preview, hint: 'Width – 1600px', input_html: {preview_version: :backend_thumb}
+    = f.input :video, as: :file, hint: 'MP4 format required'
+
+    h3 Carousel setup
+    hr.mnr-md.mnl-md
+    = f.input :in_carousel, as: :bootstrap_switch, wrapper: :bootstrap_switch, label: 'Show in carousel'
+    = f.input :carousel_cover, as: :image_preview, hint: 'Resolution - 2880x1760', input_html: { preview_version: :backend_thumb }
+
+    = f.input :carousel_text_color, collection: Project.carousel_text_colors
+    = f.input :carousel_title
+    = f.input :carousel_description, hint: 'Split lines with <br>'
+
+    h3 Gallery
+    hr.mnr-md.mnl-md
+    = render 'backend/galleries/edit', gallery_id: @project.gallery.try(:id)
+
+    h3 Content
+    hr.mnr-md.mnl-md
+    = f.input :content, input_html: { summernote: true }
+
+  .panel-footer
+    = form_buttons f, cancel_path: backend_projects_path

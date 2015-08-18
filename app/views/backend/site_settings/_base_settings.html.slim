@@ -1,0 +1,21 @@
+.page-header
+  h3
+    ' Site Settings
+- if @site_settings.present?
+  = form_tag backend_site_settings_path, method: :put, class: 'settings-form'
+    .table-responsive
+      table.table.table-striped.table-hover
+        thead
+          tr
+            /th Code
+            th Name
+            th Value
+        tbody
+          - @site_settings.each do |site_setting|
+            = fields_for 'site_settings[]', site_setting do |setting_form|
+              tr
+                /td= site_setting.code
+                td= site_setting.name
+                td= setting_form.text_field :value, class: 'form-control'
+
+    = submit_tag 'Save', class: 'btn btn-success btn-lg submit-button'

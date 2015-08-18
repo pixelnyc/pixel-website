@@ -1,0 +1,36 @@
+- content_for(:title) { 'Vacancies' }
+.page-header
+  .btn-toolbar.pull-right
+    .btn-group
+      = link_to new_backend_vacancy_path, class: 'btn btn-lg btn-success' do
+        i.fa.fa-plus
+  h3
+    ' Vacancies
+    small List
+
+= search_form_for @q, url: backend_vacancies_path, class: 'filter-form' do |f|
+  .input-group
+    = f.text_field :position_or_location_cont, class: 'form-control', placeholder: 'Search by position on location', type: 'search'
+    span.input-group-btn
+      button.btn.btn-success type="button"
+        i.fa.fa-search
+.table-responsive
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th.w-40 = Vacancy.human_attribute_name('id')
+        th Position
+        th Location
+        th.actions
+    tbody
+      - @vacancies.each do |vacancy|
+        tr
+          td= vacancy.id
+          td= link_to vacancy.position, edit_backend_vacancy_path(vacancy)
+          td= vacancy.location
+          td.text-right
+            .btn-group.toolbar
+              = edit_table_item_button edit_backend_vacancy_path(vacancy)
+              = remove_table_item_button backend_vacancy_path(vacancy)
+
+= paginate_list @vacancies

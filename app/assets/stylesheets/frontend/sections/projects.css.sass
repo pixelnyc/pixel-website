@@ -1,0 +1,232 @@
+@import 'compass/css3'
+@import "frontend/variables"
+
+
+
+.projects
+  .title-top
+    padding: 40px 50px 10px
+  .project-item
+    position: relative
+    overflow: hidden
+
+    .project-caption
+      @include transition(bottom 0.5s)
+      text-align: left
+      left: 40px
+      font-weight: lighter
+      bottom: -100px
+      .name
+        font-size: 40px
+        margin-bottom: 0
+
+      .description
+        @include transition(all 0.5s)
+        margin: 10px 0
+        opacity: 0
+
+      .read-more
+        @include transition(all 0.5s)
+        opacity: 0
+
+    &:hover
+      .overlay
+        opacity: 0.4
+
+      .project-caption
+        bottom: 0
+        .description
+          opacity: 1
+        .read-more
+          opacity: 1
+
+  .cases-list
+    margin-bottom: $base-padding
+
+
+  $tags-color: rgba(#fff, 0.7)
+  .project-tags
+    padding-top: 5px
+    position: absolute
+    right: 40px
+    top: 20px
+    z-index: 10
+    text-align: center
+    color: $tags-color
+    font-size: 29px
+    ul
+      list-style-type: none
+      li
+        border: 1px solid $tags-color
+        padding: 10px 10px
+        margin: 5px
+
+//DETAILS
+
+.project-details
+  color: #78787a
+  .project-content-container
+
+    margin: 20px auto 0
+    max-width: 1200px
+    .content-column
+      max-width: 960px
+      padding: 0 30px
+
+
+    .services-column
+      padding: 0 0 0 20px
+      text-align: center
+      max-width: 240px
+
+      .link
+        display: block
+        font-size: 16px
+        font-weight: bold
+        text-transform: uppercase
+        text-decoration: none
+        padding: 20px 20px 17px
+        text-align: center
+        background: $color-yellow
+        max-width: 200px
+        margin: auto
+        color: #000
+        @include transition(background 0.2s)
+        &:hover
+          background: #f1e856
+
+
+  .project-content
+    position: relative
+
+  .top-image
+    width: 100%
+
+
+  .project-slider
+    width: 100%
+    max-height: 600px
+    margin-bottom: 24px
+
+    .swiper-slide
+      text-align: center
+      font-size: 18px
+      background: #fff
+
+      img
+        padding: 0
+        width: 100%
+
+    .swiper-button-prev, .swiper-button-next
+      margin-top: -67px
+      opacity: 0.9
+      @include transition(all 0.3s)
+      &:hover
+        opacity: 1
+
+    .swiper-button-prev
+      left: 0
+      width: 78px
+      height: 134px
+      background-image: image-url("arrow-prev.png")
+      background-size: 78px 134px
+    .swiper-button-next
+      right: 0
+      width: 78px
+      height: 134px
+      background-image: image-url("arrow-next.png")
+      background-size: 78px 134px
+
+    .swiper-pagination-bullet
+      box-shadow: 1px 1px 1px rgba(#000, 0.3)
+    .swiper-pagination-bullet-active
+      background: $color-yellow
+
+  .video-container
+    margin: 24px 0
+    position: relative
+    .video-placeholder
+      width: 100%
+      height: auto
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+  .services
+    width: 100%
+
+    //background-color: #fafafa
+    padding: 0 20px 0
+
+    h2
+      margin-top: 0
+      font-size: 30px
+
+    ul
+      padding: 5px 0 0
+      margin: 0
+      display: block
+      list-style-type: none
+      color: #59595b
+      text-transform: uppercase
+      font-size: 14px
+      font-weight: 600
+
+      li
+        padding: 0 0 10px
+
+  .other-projects
+    .overlay
+      background-color: #000000
+
+  .more-work
+    display: block
+    border-top: 1px #eee solid
+    font-size: 50px
+    font-family: $font-lora
+    padding: 50px
+    text-align: center
+    color: #333
+
+  .share
+    margin: 60px auto
+    text-align: center
+
+@media(max-width: 992px)
+  .project-details
+    .project-content-container
+      .services-column
+        padding: 0
+    .project-slider
+      .swiper-button-prev, .swiper-button-next
+        margin-top: -45px
+        height: 90px
+        width: 55px
+        background-size: 55px 90px
+
+@media(max-width: 768px)
+  .project-details
+    h2
+      padding-left: 0
+    p
+      padding-left: 0
+
+    .more-work
+      font-size: 32px
+      padding: 24px 12px
+
+    .project-content-container
+      .content-column
+        padding: 0
+      .services-column
+        max-width: 100%
+
+    .project-slider
+      .swiper-button-prev, .swiper-button-next
+        margin-top: -30px
+        height: 60px
+        width: 33px
+        background-size: 33px 60px

@@ -1,0 +1,20 @@
+header.header.navbar-fixed-top.active(data-header)
+  .navigation(data-navigation)
+    .overlay
+    .menu-toggle-icon data-menu-open="true"
+      .line.one
+      .line.two
+      .line.three
+    ul.menu
+      li
+        h2= link_to 'Work', frontend_projects_path
+      li
+        h2= link_to 'About us', frontend_about_path
+      li
+        h2= link_to 'Journal', frontend_news_articles_path
+      li
+        h2= link_to 'Careers', frontend_vacancies_path
+      li
+        h2= link_to 'Contact', frontend_contact_path
+
+  = link_to '', root_path, class: 'logo'

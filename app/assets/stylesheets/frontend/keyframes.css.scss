@@ -1,0 +1,52 @@
+@import 'compass/css3/transform';
+@import 'mixins';
+
+// Animation for the top layer
+@include keyframes(menu-icon-layer-one) {
+  0%    { @include simple-transform(1, 0deg, 0, 0); }
+  20%   { @include simple-transform(1, 25deg, 0, 0); }
+  40%   { @include simple-transform(1, -60deg, 0, 14px); }
+  60%   { @include simple-transform(1, -45deg, 0, 14px); }
+  100%  { @include simple-transform(1, -45deg, 0, 14px); }
+}
+@include keyframes(menu-icon-layer-one-alternate) {
+  100%  { @include simple-transform(1, 0deg, 0, 0); }
+  60%   { @include simple-transform(1, 25deg, 0, 0); }
+  40%   { @include simple-transform(1, -60deg, 0, 14px); }
+  20%   { @include simple-transform(1, -45deg, 0, 14px); }
+  0%    { @include simple-transform(1, -45deg, 0, 14px); }
+}
+
+// Animation for the bottom layer
+@include keyframes(menu-icon-layer-three) {
+  0%    { @include simple-transform(1, 0deg, 0, 0); }
+  20%   { @include simple-transform(1, -25deg, 0, 0); }
+  40%   { @include simple-transform(1, 60deg, 0, -14px); }
+  60%   { @include simple-transform(1, 45deg, 0, -14px); }
+  100%  { @include simple-transform(1, 45deg, 0, -14px); }
+}
+
+@include keyframes(menu-icon-layer-three-alternate) {
+  100%    { @include simple-transform(1, 0deg, 0, 0); }
+  60%   { @include simple-transform(1, -25deg, 0, 0); }
+  40%   { @include simple-transform(1, 60deg, 0, -14px); }
+  20%   { @include simple-transform(1, 45deg, 0, -14px); }
+  0%  { @include simple-transform(1, 45deg, 0, -14px); }
+}
+
+
+// Animation for the middle layer
+@include keyframes(menu-icon-layer-two) {
+  0%    { @include transform(translateX(0) scaleX(1)); }
+  20%   { @include transform(translateX(-10px) scaleX(0.95)); }
+  36.5% { @include transform(translateX(28px) scaleX(1)); }
+  44%   { @include transform(translateX(28px) scaleX(0)); }
+  100%  { @include transform(translateX(28px) scaleX(0)); }
+}
+@include keyframes(menu-icon-layer-two-alternate) {
+  100%    { @include transform(translateX(0) scaleX(1)); }
+  44%   { @include transform(translateX(-10px) scaleX(0.95)); }
+  36.5% { @include transform(translateX(28px) scaleX(1)); }
+  20%   { @include transform(translateX(28px) scaleX(0)); }
+  0%  { @include transform(translateX(28px) scaleX(0)); }
+}

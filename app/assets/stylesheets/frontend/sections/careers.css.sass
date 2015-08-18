@@ -1,0 +1,306 @@
+@import 'compass/css3/transition'
+
+
+@import "frontend/variables"
+//CARREERS
+.careers
+
+  .application-success-message
+    text-align: center
+    margin: 0 auto 100px
+  span
+    font-size: 50px
+  .top
+    position: relative
+
+    .bg
+      width: 100%
+
+    .text
+      text-align: center
+      position: absolute
+      top: 30%
+      width: 100%
+
+      color: #fff
+
+
+  .main-content
+    background: #fff
+    margin: $base-padding 0
+    padding: 0
+
+    #london
+      border-right: none
+
+  .title-up
+    text-align: center
+    padding: 110px 0 0px 0
+    h1
+      font-size: 50px
+      color: #000000
+    span
+      font-size: 50px
+    img
+      padding: 60px 0 40px 0
+
+  .info-position
+    .title-info
+      padding: 0 0 20px 0
+      font-size: 25px
+      color: #0E1219
+    .info
+      padding: 0px 0 75px 0
+      font-size: 14px
+      color: #727385
+
+  .open-job
+    padding: 45px 40px 45px 40px
+    text-align: center
+    .title-open-job
+      font-size: 22px
+      color: #000000
+    .icon
+      font-size: 24px
+
+  .btn-position
+    height: 138px
+    border: 1px #dbdbdb solid
+    border-left: none
+    padding: 50px 25px
+    text-align: center
+    @include transition(all 0.3s)
+    .title-city
+      text-transform: uppercase
+      font-weight: 900
+      font-size: 35px
+      color: #0E1219
+    .info
+      font-size: 14px
+      color: #727385
+    &:hover, &.active
+      background-color: $color-yellow
+      border: 1px $color-yellow solid
+      border-left: none
+
+      .title-city, .info
+        color: #000
+
+
+  .interactive-btn
+    .title-btn
+      @include transition(all 0.25s ease-in-out)
+      padding: 40px 0 40px 0
+      text-align: center
+      font-size: 23px
+      color: #8e8e8e
+      border-bottom: 1px #E4E4E4 solid
+
+      &:hover, &:active
+        background-color: #2A2A2A
+        color: #fff
+
+    .icon
+      position: absolute
+      top: 24px
+      right: 30px
+
+
+  .next-info
+    margin: $base-padding 0
+    text-align: center
+    background: #fff
+    padding: 60px
+    .title-top
+      padding: 30px 0
+    .title-info
+      padding: 150px 0 40px 0
+      font-size: 48px
+      color: #000000
+    .info
+      text-align: center
+      margin: 0 auto 50px
+      padding: 0 20px
+      max-width: 400px
+      font-size: 18px
+      color: #727385
+
+  .list-info
+    margin: 50px 0
+    padding: 0 0 20px
+
+    &.with-border
+      border-right: 1px #eee solid
+    .title-info
+      padding: 0px 0 20px 10px
+      font-size: 22px
+      color: #0E1219
+    .info
+      margin: 0
+      width: 100%
+      float: left
+      padding: 10px 0 10px 10px
+      font-size: 18px
+      color: #565656
+
+.careers-new
+  .descr
+    margin: 0 30px
+    .title
+      font-size: 70px
+      margin: 60px 0 40px
+
+    .content
+      font-size: 18px
+      color: #B1B1B1
+
+  .title-careers
+    position: relative
+    img
+      width: 100%
+      height: auto
+
+    .location
+      font-size: 23px
+      font-weight: lighter
+      color: #eee
+
+    .content-info
+      text-align: center
+      position: absolute
+      top: 40%
+      left: 30px
+      right: 30px
+      h1
+        color: #ffffff
+  .img-next
+    padding: 70px 0
+    text-align: center
+
+  .title-1
+    .title
+      line-height: 1
+      padding: 0px 0 20px 0
+      width: 50%
+      font-size: 84px
+      color: #000000
+    .info
+      padding: 50px 0 50px 0
+      font-size: 18px
+      color: #B1B1B1
+
+  .title-2
+    .title
+      padding: 30px 0 30px 0
+      font-size: 41px
+      color: #000000
+    .info-next-title-carreers-new
+      padding: 10px 0 10px 0
+      font-size: 18px
+      color: #B1B1B1
+      .info
+        padding: 10px 0 10px 0
+        font-size: 18px
+        color: #B1B1B1
+
+  .title-carreers-text
+    padding: 70px 0 70px 0
+    text-align: center
+    h1
+      color: #000000
+      font-size: 70px
+.form-careers-new
+  font-size: 16px
+  margin-bottom: 120px
+  display: none
+
+  &.active
+    display: block
+
+  .form-control
+    border-radius: 0px
+    font-size: 16px
+  .input-color
+    .form-control
+      color: #ffffff
+      background-color: #D4D4D4
+      border-radius: 0px
+      font-size: 16px
+
+  input
+    padding: 38px
+    width: 100%
+
+    font-size: 16px
+    font-weight: lighter
+
+    &[type=submit]
+      @include transition(all 0.3s)
+      font-weight: bold
+      font-size: 32px
+      text-transform: uppercase
+
+      padding: 25px
+
+      background: $color-yellow
+      text-align: center
+      color: #000
+      border: none
+
+      &:hover, &:active
+        background: lighten($color-yellow, 8%)
+
+
+  .input-container
+    padding: 10px
+    position: relative
+
+  .file-input
+    position: relative
+    height: 80px
+    &::-webkit-file-upload-button
+      visibility: hidden
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+
+      width: 100%
+      height: 100%
+      display: block
+
+      background: #1F1F1F
+      border: 1px #1F1F1F solid
+      color: #fff
+      padding: 26px 38px
+      outline: none
+
+      white-space: nowrap
+      -webkit-user-select: none
+      cursor: pointer
+
+    &.cover-letter
+      &::before
+        content: 'Attach Cover letter'
+
+    &.resume
+      &::before
+        content: 'Attach Resume'
+
+  .icon-attach
+    position: absolute
+    top: 32px
+    right: 36px
+
+
+
+
+  .social-careers
+    margin: 50px auto 120px
+    text-align: center
+
+@media(max-width: 768px)
+  .careers
+    .list-info.with-border
+      border: 0

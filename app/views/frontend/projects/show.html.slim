@@ -1,0 +1,40 @@
+- content_for(:title) { @project.name }
+- content_for(:description) { @project.description }
+- content_for(:image_url) { @project.tile_cover.url(:main, only_path: false) }
+
+.project-details.container-fluid
+  .title-top
+    h1 = @project.name
+    .descr = @project.description
+
+  .container
+    - if @project.video.present?
+        = video_tag @project.video.url, autoplay: true
+    - elsif @project.gallery.gallery_photos.count > 0
+      = render 'gallery', gallery: @project.gallery
+    - elsif @project.cover.present?
+      = image_tag @project.cover.url(:main), class: 'top-image'
+
+  .container
+    .row.project-content-container
+      .col-md-9.content-column.wysiwyg-content
+        == @project.content
+      .col-md-3.services-column
+        - if @project.services.any?
+          .services
+            h2 Services
+            ul
+              - @project.services.each do |service|
+                li = service
+
+        - if @project.link.present?
+          = link_to 'VISIT SITE', @project.link, class: 'link', target: '_blank'
+
+
+  .share
+    = widget :social_share, :show, url: frontend_project_url(@project), title: @project.name, image: (@project.cover.url(:main) if @project.cover.present?)
+
+  .more-work More Work
+
+  = widget :projects_recent, :show, excluded: @project
+  /= render 'action_button'

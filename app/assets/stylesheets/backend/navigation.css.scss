@@ -1,0 +1,198 @@
+@import '_variables';
+
+
+.nav>li>a {
+  color: #364c63;
+}
+
+.app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu {
+  padding-left: 25px;
+}
+
+.nav>li>a:focus,.nav>li>a:hover {
+  color: #243342;
+}
+
+.nav>.nav-heading {
+  padding: 5px 15px;
+  color: #7f8992;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.nav-sidebar {
+  margin: 10px 0;
+}
+
+.nav-sidebar>li a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-decoration: none;
+//  line-height: 28px;
+}
+
+.nav-sidebar>li a .arrow,.nav-sidebar>li a .figure,.nav-sidebar>li a .number,.nav-sidebar>li a .text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.nav-sidebar>li a .figure {
+  width: 40px;
+}
+
+.nav-sidebar>li a .figure.figure-left {
+  text-align: left;
+}
+
+.nav-sidebar>li a .figure.figure-right {
+  text-align: right;
+}
+
+.nav-sidebar>li a .figure.arrow {
+  font-family: appicon;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.nav-sidebar>li a .figure.arrow:after {
+  position: relative;
+  right: -6px;
+  content: "\e7c3";
+}
+
+.nav-sidebar>li a.nav-toggle {
+  padding: 0 20px;
+  line-height: 46px;
+}
+
+.nav-sidebar>li a.nav-toggle .figure.icon {
+  font-size: 24px;
+}
+
+.nav-sidebar>li a.nav-toggle .text {
+  width: 100%;
+  font-size: 14px;
+}
+
+.nav-sidebar>li a.nav-toggle.no-icon:before {
+  left: 20px;
+}
+
+.nav-sidebar>li a.nav-toggle:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 60px;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: transparent;
+}
+
+.nav-sidebar>li a.nav-toggle:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #3a4856;
+  -webkit-transition: left .2s ease-in-out;
+  -o-transition: left .2s ease-in-out;
+  transition: left .2s ease-in-out;
+}
+
+.nav-sidebar>li>.nav-submenu {
+  display: none;
+  overflow: hidden;
+  list-style: none;
+  padding-left: 60px;
+  padding-right: 15px;
+}
+
+.nav-sidebar>li>.nav-submenu>li:first-child {
+  padding-top: 10px;
+}
+
+.nav-sidebar>li>.nav-submenu>li:last-child {
+  padding-bottom: 10px;
+}
+
+.nav-sidebar>li.active .nav-toggle .figure.arrow:after {
+  content: "\e7c1";
+}
+
+.nav-sidebar>li.active .nav-toggle:after {
+  left: 0;
+  -webkit-transition: left .2s ease-in-out;
+  -o-transition: left .2s ease-in-out;
+  transition: left .2s ease-in-out;
+}
+
+.nav-sidebar>li.active>.nav-submenu {
+  display: block;
+}
+
+.nav-sidebar>.nav-heading {
+  text-transform: uppercase;
+  padding: 8px 20px;
+}
+
+.sidebar-left-collapse .nav-sidebar>li a.nav-toggle {
+  padding: 4px 0;
+}
+
+.sidebar-left-collapse .nav-sidebar>li a.nav-toggle .text {
+  display: none;
+}
+
+.sidebar-left-collapse .nav-sidebar>li a.nav-toggle .figure {
+  width: 100%;
+}
+
+.sidebar-left-collapse .nav-sidebar>li a.nav-toggle .figure.icon {
+  text-align: center;
+  font-size: 24px;
+}
+
+.sidebar-left-collapse .nav-sidebar>li a.nav-toggle .figure.figure-right {
+  display: none;
+}
+
+.sidebar-left-collapse .nav-sidebar>li a.nav-toggle:before {
+  left: 0;
+}
+
+.sidebar-left-collapse .nav-sidebar>li>.nav-submenu {
+  display: none;
+  width: 182px;
+  position: absolute;
+  top: 0;
+  left: 68px;
+  padding: 15px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.sidebar-left-collapse .nav-sidebar>li>.nav-submenu>li:first-child {
+  padding-top: 0;
+}
+
+.sidebar-left-collapse .nav-sidebar>li>.nav-submenu>li:last-child {
+  padding-bottom: 0;
+}
+
+.sidebar-left-collapse .nav-sidebar>li.hover>.nav-submenu,.sidebar-left-collapse .nav-sidebar>li:hover>.nav-submenu {
+  display: block;
+}
+
+.sidebar-left-collapse .nav-sidebar>.nav-heading {
+  display: none;
+}
+
+.nav-pills>li+li {
+  margin-left: 5px;
+}

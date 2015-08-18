@@ -1,0 +1,15 @@
+.slides-container(data-slider-container)
+  - @projects.each_with_index do |project, index|
+    .slide.active(style='#{background_image(project.carousel_cover.url)}')
+      = link_to frontend_project_path(project), class: "name-container #{project.carousel_text_color}" do
+        h2.title = project.carousel_title
+        h3.descr == project.carousel_description
+      /= link_to frontend_project_path(project), class: 'external-link' do
+        = image_tag 'arrow-right.svg'
+
+  a.skip-button.hidden-xs(data-skip-slider href="#")
+    = image_tag 'icons/arrow-bottom-carousel.svg', class: 'icon-skip'
+
+nav.slider-nav
+  - @projects.each_with_index do |project, index|
+    a(data-slider-nav href="#slide-#{index}" data-slide-index="#{index}" class="#{ 'active' if index == 0 }")

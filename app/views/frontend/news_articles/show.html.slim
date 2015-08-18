@@ -1,0 +1,33 @@
+- content_for(:title) { @news_article.title }
+- content_for(:description) { @news_article.readout }
+
+.news
+  .main-article-container(style="background-image: url('#{@news_article.cover.url(:main) || image_path('frontend/news_articles/journal.jpg')}')")
+    .overlay
+    .thumbnail
+      = link_to frontend_news_article_path(@news_article), class: 'carousel-caption' do
+        .specification
+          span.section> JOURNAL
+          span.delimiter
+            ' /
+          span.date = l @news_article.created_at, format: :short
+        .content-info
+          h1.title = @news_article.title
+          h2.descr = @news_article.readout
+
+  .container
+    article.article
+      .author Author: #{@news_article.author}
+
+      /h1.headline = @news_article.readout
+      .wysiwyg-content.content == @news_article.content
+      .share
+        = widget :social_share, :show, url: frontend_news_article_url(@news_article), title: @news_article.title, image: (@news_article.cover.url(:main) if @news_article.cover.present?)
+
+      hr
+
+      .comments
+        h3 Comments
+        = render 'comments'
+
+  /= render 'action_button'

@@ -1,0 +1,24 @@
+.projects
+  .container.top-video-container
+    video.bg.hidden-xs autoplay="autoplay" loop="loop" muted="false" poster="#{ asset_path 'projects-cover.jpg' }"
+      source type="video/mp4" src="https://s3.amazonaws.com/pixel-website-videos/work-top.mp4"
+    = image_tag 'projects-cover.jpg', class: 'bg visible-xs'
+    .overlay
+
+    h1 Gettin' It.
+
+  .container
+    .title-top
+      h1 Recent Work
+
+  .container.move-down-on-scroll(data-move-down)
+    .icon-arrow
+      = image_tag 'icons/icon-arrow-dark.svg', class: 'dark-arrow'
+      = image_tag 'icons/icon-arrow.svg', class: 'light-arrow'
+
+    .cases-list
+      .row
+        - @projects.each do |project|
+          .col-lg-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: project
+
+/= render 'action_button'

@@ -1,0 +1,35 @@
+- content_for(:title) { 'Careers' }
+
+.careers
+  .container.top-video-container
+    = image_tag 'careers-cover.jpg', class: 'bg'
+    .overlay
+
+    h1 Work With Us.
+
+  .next-info
+    .title-top
+      h1
+        | We´re always looking for
+        .yellow new talent.
+
+  .container.main-content
+
+    .row
+      .col-xs-12.col-sm-4.btn-position
+        .title-city New York
+
+      a.col-xs-12.col-sm-4.btn-position(data-open-application-form href="#")
+        .title-city Apply
+        .info Send us your application
+
+      .col-xs-12.col-sm-4.btn-position
+        .title-city London
+
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2(data-application-form-container)
+        = render 'form'
+
+
+= link_to 'Send us your application anytime', root_path, class: 'contact-action-btn'

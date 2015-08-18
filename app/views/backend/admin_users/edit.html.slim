@@ -1,0 +1,5 @@
+- content_for(:title) { "User #{@user.email}" }
+.page-header
+  h3 User #{@user.email}
+.pa-md
+  = render 'form'

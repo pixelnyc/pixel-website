@@ -1,0 +1,6 @@
+= simple_form_for [:backend, @user], html: { class: 'form panel form-vertical' }, wrapper: :vertical_form do |f|
+  .panel-body
+    = f.input :email, placeholder: 'email@domain.com'
+    = f.input :password
+  .panel-footer
+    = form_buttons f, cancel_path: backend_admin_users_path

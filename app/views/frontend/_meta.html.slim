@@ -1,0 +1,14 @@
+- title = [yield(:title), @settings[:app_name]].reject(&:empty?).join(' / ')
+- description = yield(:description) || @settings[:meta_description]
+- image_url = yield(:image_url) || 'http://www.pixel-nyc.com/pixel-logo.jpg'
+
+title= title
+meta name="keywords" content="#{@settings[:meta_keywords]}"
+meta name="description" content="#{description}"
+meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+
+meta property="og:url" content="http://pixel-nyc.com"
+meta property="og:title" content="#{ title }"
+meta property="og:description" content="#{ description }"
+meta property="og:type" content="website"
+meta property="og:image" content="#{ image_url }"

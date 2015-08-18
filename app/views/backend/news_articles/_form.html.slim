@@ -1,0 +1,11 @@
+= simple_form_for [:backend, @news_article], html: { class: 'form panel form-vertical' }, wrapper: :vertical_form do |f|
+  .panel-body
+    = f.input :published, as: :bootstrap_switch, wrapper: :bootstrap_switch
+    = f.input :title, placeholder: 'Title'
+    = f.input :author
+    = f.input :readout, as: :text, placeholder: 'Link to page'
+
+    = f.input :cover, as: :image_preview, input_html: { preview_version: :backend_thumb }
+    = f.input :content, input_html: { summernote: true }
+  .panel-footer
+    = form_buttons f, cancel_path: backend_news_articles_path

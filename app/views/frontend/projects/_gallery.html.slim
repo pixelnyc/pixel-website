@@ -1,0 +1,10 @@
+
+.swiper-gallery
+  .swiper-container.project-slider(data-project-slider)
+    .swiper-wrapper
+      - gallery.gallery_photos.each do |gallery_photo|
+        .swiper-slide
+          = image_tag gallery_photo.photo.url(:main)
+
+    .swiper-button-next
+    .swiper-button-prev

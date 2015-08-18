@@ -1,0 +1,558 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300)
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700)
+
+@import 'compass/css3/box-sizing'
+@import 'compass/css3/background-size'
+@import 'compass/css3/transition'
+@import 'compass/css3/transform'
+
+@import 'frontend/variables'
+
+html
+  width: 100%
+  height: 100%
+
+body
+  font-family: $font-proxima-nova
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+
+  background-color: $color-background
+  overflow: auto
+  margin: 0
+  padding: 0
+  position: relative
+  width: 100%
+  line-height: 1
+
+  -webkit-margin-before: 0
+  -webkit-margin-end: 0
+  -webkit-margin-after: 0
+  -webkit-margin-start: 0
+
+  &.gallery
+    height: 100%
+    overflow: hidden
+
+*
+
+  border-radius: 0
+  -webkit-padding-start: 0px
+*
+  padding: 0
+  margin: 0
+
+::-webkit-input-placeholder
+  color: #ffffff
+::-moz-placeholder
+  color: #ffffff
+
+a
+  color: #333
+  &:hover
+    color: #888
+
+
+a, a:hover, a:active, a:visited, a:link
+  text-decoration: none
+
+*:focus
+  outline: 0
+textarea
+  resize: none
+  outline: none
+textarea:focus
+  outline: 0 none !important
+  -webkit-box-shadow: none
+input:focus
+  outline: 0 none !important
+
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+
+h1
+  font-size: 60px
+  font-weight: 900
+
+h2
+  font-size: 42px
+  font-weight: 900
+
+h4, h5, h6
+  font-weight: normal
+
+p, ul
+  font-size: 20px
+  line-height: 25px
+
+p
+  font-family: $font-lora
+  margin: 0
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
+  padding: 0
+
+ul
+  line-height: 1.5em
+
+.container
+  @include box-sizing(border-box)
+  width: 100%
+  padding: 0 $base-padding
+
+.container-fluid
+  padding-left: 0
+  padding-right: 0
+  
+.row
+  margin-right: 0
+  margin-left: 0
+
+.btn-default
+  background-color: transparent
+  color: #ffffff
+  margin-top: 30px
+  padding: 10px 40px
+  border-radius: 0
+  
+.size-fix-stub
+  opacity: 0
+  pointer-events: none
+  width: 100%
+
+.left
+  text-align: left
+.right
+  text-align: right
+
+.padding-s
+  padding: 40px
+.padding-m
+  padding: 100px 80px
+
+
+.overlay-details
+  h1
+    color: #ffffff
+    font-size: 54px
+    font-weight: 400
+
+.yellow
+  color: $color-yellow
+
+.overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#000, 0.6)
+
+.section-text-block
+  padding: 50px 0 60px
+  text-align: center
+
+  .section-icon-up
+    margin-bottom: 20px
+
+  .icon-down
+    margin-top: 20px
+
+$grid-block-padding: 20px
+.grid-block
+  @include background-size(cover)
+
+  position: relative
+  display: block
+  height: 100%
+  overflow: hidden
+
+
+  .overlay
+    @include transition(all 0.5s)
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($color-red, 0.9)
+
+  .cover
+    @include transition(all 0.7s)
+    width: 100%
+    height: 100%
+
+
+
+  .content-container
+    @include transition(all 0.4s)
+    display: block
+
+    position: absolute
+    left: $grid-block-padding
+    right: $grid-block-padding
+    bottom: 0
+
+    opacity: 0
+    text-align: left
+    color: #fff
+
+    .section
+      text-transform: uppercase
+      color: #fff
+      font-size: 14px
+      font-weight: normal
+      margin-bottom: 12px
+
+    .title
+      font-size: 24px
+      font-weight: 900
+      text-transform: uppercase
+      margin: 0
+
+  &:hover
+    background-position: -10% -10% 110% 110%
+    .overlay
+      opacity: 1
+
+    .cover
+      @include transform(scale(1.1))
+
+    .content-container
+      bottom: $grid-block-padding
+      opacity: 1
+
+.journal-block
+  @include transition(all 0.4s)
+  background: #fff
+  padding: $grid-block-padding
+  display: block
+  overflow: hidden
+  position: relative
+
+  .image-stub
+    width: 100%
+    height: 100%
+
+  .content-info
+    position: absolute
+    bottom: $grid-block-padding
+    left: $grid-block-padding
+    right: $grid-block-padding
+
+    .specification
+      text-transform: uppercase
+      color: #000
+      font-size: 14px
+      font-weight: normal
+      margin-bottom: 12px
+
+    .title
+      font-size: 24px
+      font-weight: 900
+      text-transform: uppercase
+      margin: 0
+      color: #000
+
+  &:hover
+    background: $color-red
+    .content-info
+      .specification
+        color: #fff
+
+      .title
+        color: #fff
+
+.read-more
+  @include transition(all 0.3s)
+  margin-top: 20px
+  padding: 10px 40px
+  border-radius: 0
+
+  background-color: transparent
+
+  font-size: 19px
+
+  text-decoration: none
+  display: inline-block
+
+
+  &:hover
+    text-decoration: none
+    text-shadow: none
+    cursor: pointer
+
+
+.thumbnail
+  padding: 0
+  margin-bottom: 0
+  border: none
+
+  img
+    width: 100%
+
+
+//WORK, CASES, ABOUT
+.title-top
+  text-align: center
+  padding: 80px 50px 60px
+  h1
+    font-size: 64px
+    color: #000000
+  .descr
+    font-size: 20px
+    color: #525252
+  a.title
+    font-size: 50px
+    color: $color-yellow
+  a.read-more.light
+    //border: 1px #B1B1B1 solid
+    border-radius: 30px
+    font-size: 14px
+    color: #B1B1B1
+
+    //&:hover
+      background-color: #f1f1f1
+
+
+//WORK, CASES, ABOUT, JOURNAL, CONTACT
+.contact-action-btn
+  display: block
+  width: 100%
+  padding: 54px
+  text-align: center
+  background-color: $color-yellow
+  color: #000
+  font-size: 40px
+  font-weight: bold
+
+  &:hover, &:active
+    color: rgba(#000, 0.9)
+
+
+.share-container
+  width: 370px
+  display: inline-block
+  .text-label
+    display: inline-block
+    color: #000000
+    font-size: 15px
+    font-weight: bold
+    padding-right: 20px
+
+  .icons-container
+    margin-top: 3px
+    display: inline-block
+
+    a
+      i
+        @include transition(color 0.2s)
+        display: inline-block
+        padding: 0 15px 0 15px
+        font-size: 25px
+        color: #E0E0E0
+
+      &:hover
+        i
+          color: #929292
+
+.recent-cases
+  img
+    padding: 0 !important
+
+.top-video-container
+  position: relative
+  padding: 0
+  font-size: 0
+
+  video
+    background: transparent
+
+  img
+    width: 100%
+  .bg
+    width: 100%
+
+  h1
+    position: absolute
+    top: 50%
+    margin-top: -70px
+    left: 0
+    font-size: 140px
+
+    width: 100%
+    color: #fff
+    text-align: center
+
+  .overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    background-image: image-url('bg-overlay.png')
+    background-repeat: repeat
+    z-index: 0
+
+
+.move-down-on-scroll
+  @include transition(margin-top 0.5s)
+  margin-top: -300px
+  padding-top: 60px
+  z-index: 1
+  overflow: auto
+  position: relative
+
+  .icon-arrow
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -11px
+
+    .light-arrow
+      display: block
+    .dark-arrow
+      display: none
+
+  &.active
+    margin-top: 0
+
+    .icon-arrow
+      .light-arrow
+        display: none
+      .dark-arrow
+        display: block
+
+.loader-container
+  @include transition(opacity 0.4s)
+  background: #fff
+  display: table
+  position: fixed
+  width: 100%
+  height: 100%
+  text-align: center
+  z-index: 101
+  top: 0
+  right: 0
+  overflow: hidden
+
+  &.inactive
+    opacity: 0
+
+
+  .wrapper
+    display: table-cell
+    width: 100%
+    height: 100%
+    position: relative
+    text-align: center
+    vertical-align: middle
+
+    .spinner
+      width: 48px
+      height: 48px
+      background-color: $color-yellow
+      display: inline-block
+
+      -webkit-animation: rotateplane 1.2s infinite ease-in-out
+      animation: rotateplane 1.2s infinite ease-in-out
+
+
+
+
+
+
+  @-webkit-keyframes rotateplane
+    0%
+      -webkit-transform: perspective(120px)
+    50%
+      -webkit-transform: perspective(120px) rotateY(180deg)
+    100%
+      -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg)
+
+  @keyframes rotateplane
+    0%
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    50%
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    100%
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+
+.wysiwyg-content
+  ul
+    font-family: $font-lora
+
+  img, video
+    width: 100%
+
+  h2
+    color: #343434
+    display: inline-block
+    font-size: 28px
+
+  h3
+    font-size: 20px
+    color: #050505
+
+  .attachment-container
+    margin-bottom: 16px
+
+  p
+    color: #78787a
+    padding: 16px 0 16px 0
+    font-family: "Lora", serif
+    font-size: 20px
+    line-height: 35px
+
+  ul
+    padding-left: 40px
+    padding-top: 16px
+
+@media(max-width: 768px)
+  h1
+    font-size: 36px
+    font-weight: 900
+
+  h2
+    font-size: 28px
+    font-weight: 900
+
+  h4, h5, h6
+    font-weight: bold
+
+  .container
+    padding: 0 $base-padding-mobile
+
+  .section-text-block
+    padding: 20px 0 20px
+
+  .title-top
+    text-align: center
+    padding: 40px 20px 30px
+
+  .contact-action-btn
+    font-size: 32px
+    padding: 20px
+
+  .top-video-container
+    padding: 0
+    h1
+      margin-top: -20px
+      font-size: 40px
+
+
+  .home
+    .slides-container
+      .slide
+        .name-container
+          width: 80%
+
+  .move-down-on-scroll
+    margin-top: 0
+    .icon-arrow
+      .light-arrow
+        display: none
+      .dark-arrow
+        display: block

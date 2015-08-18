@@ -1,0 +1,24 @@
+- content_for(:title) { @vacancy.position }
+.careers-new
+  .title-careers
+    .overlay
+    = image_tag 'careers/designer.jpg'
+    .content-info
+      h1 = @vacancy.position
+      span.location
+        | #{@vacancy.location} Office
+
+  .container
+    .descr
+      h2.title What are we looking for?
+      .content = raw(@vacancy.content)
+
+    .title-carreers-text
+      h2
+        ' Interested?
+        br
+        span.yellow Email Us.
+
+    .row
+      .col-lg-8.col-lg-offset-2
+        = render 'form'

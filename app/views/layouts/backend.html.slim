@@ -1,0 +1,22 @@
+doctype html
+html ng-app="BackendApp"
+  head
+    title= [yield(:title), 'Pixel CMS'].reject(&:empty?).join(' / ')
+    = stylesheet_link_tag    'backend', media: 'all'
+    = javascript_include_tag 'backend'
+    = favicon_link_tag 'favicon.ico'
+    = csrf_meta_tags
+    = render 'backend/meta'
+  body.csstransforms3d ng-controller="CoreSettingsController" data-ng-class="{ 'page-loading': core.settings.pageLoading, 'header-fixed': core.settings.headerFixed, 'sidebar-left-fixed': core.settings.sidebarLeftFixed, 'sidebar-left-collapse': core.settings.sidebarLeftCollapse || core.screen.sm, 'sidebar-open-ltr': core.settings.sidebarLeftOpen}"
+    #app-wrapper
+      = render 'backend/sidebar'
+      = render 'backend/header'
+
+      section#app-content.clearfix
+        .content-body ng-style="{'min-height':+core.screen.height+'px'}"
+          = render 'backend/shared/flash_messages'
+          = yield
+
+      section#app-backdrop data-ng-class="{'show': core.settings.sidebarLeftOpen}" data-ng-click="core.settings.sidebarLeftOpen = !core.settings.sidebarLeftOpen"
+
+      = render 'backend/footer'

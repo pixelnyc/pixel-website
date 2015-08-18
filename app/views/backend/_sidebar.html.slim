@@ -1,0 +1,50 @@
+aside.app-sidebar.sidebar-left
+  .sidebar-header
+    = link_to backend_path, class: 'brand' do
+      /.logo
+        = image_tag 'backend/logo_star.svg'
+      .name
+        span.brand-text Pixel CMS
+
+  .sidebar-content
+    ul.nav.nav-sidebar
+
+      li
+        = link_to '/', class: 'nav-toggle', target: '_blank' do
+          span.figure.figure-left.icon
+            i.ai.ai-keyboard-arrow-left
+          span.text.ellipsis Go to website
+
+      h3.section-name Content
+
+      = active_link_to backend_news_articles_path, wrap_tag: :li, class: 'nav-toggle' do
+        span.figure.figure-left.icon
+          i.ai.ai-now-wallpaper
+        span.text.ellipsis News
+
+      = active_link_to backend_projects_path, wrap_tag: :li, class: 'nav-toggle' do
+        span.figure.figure-left.icon
+          i.ai.ai-wallet-travel
+        span.text.ellipsis Projects
+
+      /= active_link_to backend_vacancies_path, wrap_tag: :li, class: 'nav-toggle' do
+        span.figure.figure-left.icon
+          i.ai.ai-people
+        span.text.ellipsis Vacancies
+
+      = active_link_to backend_applications_path, wrap_tag: :li, class: 'nav-toggle' do
+        span.figure.figure-left.icon
+          i.ai.ai-mail
+        span.text.ellipsis Vacancy applications
+
+      h3.section-name Configuration
+
+      = active_link_to backend_admin_users_path, wrap_tag: :li, class: 'nav-toggle' do
+        span.figure.figure-left.icon
+          i.ai.ai-recent-actors
+        span.text.ellipsis Admin Users
+
+      = active_link_to backend_site_settings_path, wrap_tag: :li, class: 'nav-toggle' do
+        span.figure.figure-left.icon
+          i.ai.ai-tune
+        span.text.ellipsis Settings

@@ -1,0 +1,288 @@
+@import 'compass/utilities/general/clearfix'
+
+@import 'variables'
+
+.panel-footer
+  position: fixed
+  bottom: 0%
+  right: 0
+  width: 100%
+  //text-align: right
+  text-align: center
+  padding: 10px 15px  10px 265px
+  //margin-left: 250px
+
+.emcees-program
+  .control-label
+    margin-right: 10px
+
+.timeform
+  width: 25%
+.success-footer
+  height: 63px
+  .button-success
+    margin: 5px
+
+.small-button
+  padding: 2px 5px
+  font-size: 11px
+.actions-small
+  width: 75px
+  i
+    opacity: 0
+    margin: 0 15px
+
+
+.icon-up-down
+  position: relative
+  .icon-reorder
+    position: absolute
+    left: 5px
+    top: 18px
+    i.ai.ai-reorder
+
+
+.updated-at-message
+  margin: 5px 15px 15px 15px
+  font-size: 15px
+  color: #717476
+  //float: left
+  text-align: left
+  span
+    color: $color-red
+    font-size: 14px
+.requirements
+  margin: 5px 15px 15px 15px
+  font-size: 15px
+  color: #717476
+
+.toolbar
+  min-width: 120px
+  text-align: right
+  .btn
+    height: 100%
+    display: inline
+    .ai
+      font-size: 16px
+
+.page-header
+  +clearfix()
+  h3
+    float: left
+  .locale-switcher
+    float: right
+
+  .btn-toolbar
+    .btn
+      .ai
+        font-size: 20px
+
+.table.table-striped.top-charts
+  margin-bottom: 70px
+
+.panel
+  margin-bottom: 65px
+.table-gallery
+  td:nth-child(1)
+    width: 30px
+  td:nth-child(2)
+    width: 130px
+
+.filter-form
+  padding: 25px 15px
+  .btn.btn-success
+    background-color: #3a4856
+    border-color: #3a4856
+.nav-submenu
+  .figure.figure-left.icon
+    width: 32px
+
+.app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu > li.active a, .app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu > li.open a
+  transition-duration: 0.1s
+  color: $color-yellow !important
+
+//.app-sidebar.sidebar-left .nav-sidebar > li:hover a, .app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu > li:hover a, .app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu > li:hover a
+  transition-duration: 0.1s
+  color: #2c71fd !important
+
+
+.nav-sidebar > li a .arrow, .nav-sidebar > li a .figure, .nav-sidebar > li a .number, .nav-sidebar > li a .text
+  transition-duration: 0.1s
+  &:hover
+    transition-duration: 0.1s
+
+.nav-submenu
+  transition-duration: 0.5s
+  i
+    font-size: 21px
+  .text.ellipsis
+    margin-left: -5px
+
+#photos-list
+  padding: 20px 0
+
+.app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu
+  background-color: #202e3c
+
+.brand
+  padding: 13px 0 0 0
+  .logo
+    width: 44px
+    height: 36px
+    float: left
+  .name
+    float: left
+    font-weight: 500
+
+  .icon
+    width: 64px
+    height: 64px
+    fill: #fff
+
+#add-song-form.form-inline
+  padding: 25px 15px
+
+.btn-toolbar
+  margin-top: -7px
+
+.pagination.pagination
+  text-align: center
+
+.button-success
+  margin: 15px 15px
+
+.button-add-association
+  margin: 5px 0px 45px 0px
+
+.button-actions-remove
+  margin: 22px 15px 0 0
+  float: right
+
+.mnl-md>.nested-fields
+  background-color: #5bc0de
+
+.nested-fields
+  margin: 5px 0 5px 0
+  position: relative
+
+.list-weeks
+  margin: 30px 15px
+  text-align: center
+  li
+    font-size: 15px
+    padding-right: 10px
+    padding-left: 10px
+
+
+.csstransforms3d
+  .app-sidebar.sidebar-left .nav-sidebar > li.active .nav-toggle
+    color: $color-yellow
+  .btn-success
+    background-color: #1bc05e
+    color: #fff
+    i
+      color: #fff
+  .app-sidebar.sidebar-left .nav-sidebar > li a.nav-toggle:after
+    background-color: $color-yellow !important
+  .app-sidebar.sidebar-left .sidebar-header
+    background-color: $color-yellow !important
+  .app-sidebar.sidebar-left
+    background-color: #131519 !important
+  .app-sidebar.sidebar-left .nav-sidebar > li > .nav-submenu
+    background-color: #1c1f25 !important
+  .app-sidebar.sidebar-left .nav-sidebar > li a.nav-toggle:before
+    background-color: #23262c !important
+
+.sidebar-left-collapse
+  .brand
+    .name
+      display: none
+
+
+@media (max-width: 991px)
+  .brand
+    .name
+      display: none
+
+.video-container
+  position: relative
+  .video-placeholder
+    width: 100%
+    height: auto
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.attachment-item
+  width: 100px
+  height: 100px
+  padding: 6px
+  overflow: hidden
+  display: inline-block
+
+  &.active
+    .thumbnail
+      background-color: $color-blue
+
+.gallery-item
+  width: 220px
+  height: 300px
+  overflow: hidden
+  .gallery-title
+    padding-left: 10px
+    font-size: 18px
+
+.app-sidebar .sidebar-header ~ .sidebar-content
+  height: 100%
+
+.nav-sidebar
+  height: 100%
+  overflow-y: auto
+
+  .section-name
+    margin: 32px 10px 4px
+
+    color: #555
+    font-size: 16px
+    font-weight: lighter
+
+.app-sidebar.sidebar-left
+  position: fixed !important
+
+
+.tour-type-tabs
+  margin-top: 16px
+
+  a
+    font-size: 18px
+    font-weight: bold
+
+.gallery-container
+  background: #fff
+  border: 1px solid #ddd
+  border-top: none
+  border-radius: 0 0 4px 4px
+
+
+.form-group
+  img
+    display: block
+    padding: 6px 0
+  .image_preview.form-control, .carrierwave-file.form-control
+    border: none
+    padding: 6px 0
+
+.filter-form
+  .search-field-container
+    padding-right: 0
+
+
+  .submit-button
+    display: block
+    width: 100%
+
+.export-btn-container
+  margin: 0 15px 15px 15px

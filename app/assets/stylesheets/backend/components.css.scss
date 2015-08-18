@@ -1,0 +1,705 @@
+
+.alert {
+  border-radius: 2px;
+}
+
+.brand {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.brand,.brand:focus,.brand:hover {
+  text-decoration: none;
+  color: #f2f5f8;
+}
+
+.brand .brand-figure,.brand .brand-text {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  height: 38px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.brand .brand-figure {
+  width: 38px;
+
+  i {
+    top: 3px;
+    font-size: 26px;
+    color: #fdd835;
+  }
+}
+
+.brand .brand-text {
+  line-height: 38px;
+}
+
+.brand.brand-lg .brand-figure,.brand.brand-lg .brand-text {
+  height: 48px;
+}
+
+.brand.brand-lg .brand-figure {
+  width: 48px;
+  -webkit-background-size: 48px 48px;
+  background-size: 48px 48px;
+}
+
+.brand.brand-lg .brand-text {
+  line-height: 48px;
+}
+
+.bullet {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #7f8992;
+}
+
+.bullet.bullet-primary {
+  background-color: #2196f3;
+}
+
+.bullet.bullet-success {
+  background-color: #4caf50;
+}
+
+.bullet.bullet-info {
+  background-color: #00bcd4;
+}
+
+.bullet.bullet-warning {
+  background-color: #ffeb3b;
+}
+
+.bullet.bullet-danger {
+  background-color: #f44336;
+}
+
+
+pre {
+  padding: 15px;
+  background-color: #ebf0f4;
+  border: 1px solid #dbdfe3;
+  border-radius: 2px;
+}
+
+pre.scroll-x {
+  width: 100%;
+  word-break: normal;
+  word-wrap: normal;
+  overflow-x: scroll-x;
+}
+
+
+.dropdown-menu [ng-switch=datepickerMode] {
+  margin-top: -5px;
+  margin-bottom: -8px;
+  border-width: 0 0 1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.caret {
+  margin-top: -1px;
+}
+
+.dropdown-menu {
+  font-size: 13px;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.06);
+  box-shadow: 0 3px 6px rgba(0,0,0,.06);
+  border-radius: 2px;
+}
+
+.dropdown-menu .divider {
+  margin: 5px 0;
+}
+
+.dropdown-menu .panel {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-width: 0;
+  margin-bottom: 0;
+}
+
+.dropdown-menu .panel .panel-heading {
+  border-radius: 0;
+}
+
+.dropdown-menu>li>a {
+  position: relative;
+  z-index: 1;
+  margin-top: -1px;
+  padding: 5px 20px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.dropdown-menu>li>a>.ai,.dropdown-menu>li>a>.icon {
+  color: #7f8992;
+}
+
+.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover {
+  z-index: 2;
+  border-color: #eff1f3;
+}
+
+.img-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper+.img-wrapper {
+  margin-left: 3px;
+}
+
+.img-wrapper.pull-right+.img-wrapper {
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+.img-wrapper:after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: inherit;
+  -webkit-box-shadow: inset 0 0 3px 0 rgba(0,0,0,.3);
+  box-shadow: inset 0 0 3px 0 rgba(0,0,0,.3);
+}
+
+.img-wrapper>img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-rounded {
+  border-radius: 2px;
+}
+
+
+.media {
+  position: relative;
+  margin-top: 0;
+  padding: 10px 15px;
+  border-bottom: 1px solid #dbdfe3;
+}
+
+.media:last-child {
+  border-bottom-width: 0;
+}
+
+.media.media-new {
+  background-color: #f2f5f8;
+}
+
+.media .media-left,.media .media.pull-left {
+  margin-right: 15px;
+}
+
+.media .media-right,.media .media.pull-right {
+  margin-left: 15px;
+}
+
+.media .media-left,.media .media-right {
+  min-width: 57px;
+}
+
+.media .media-left .img-wrapper,.media .media-left img,.media .media-right .img-wrapper,.media .media-right img {
+  width: 42px;
+  height: 42px;
+}
+
+.media.media-sm .media-left,.media.media-sm .media-right {
+  min-width: 47px;
+}
+
+.media.media-sm .media-left .img-wrapper,.media.media-sm .media-left img,.media.media-sm .media-right .img-wrapper,.media.media-sm .media-right img {
+  width: 32px;
+  height: 32px;
+}
+
+
+.slide-down,.slide-down>.content-body,.slide-left,.slide-left>.content-body,.slide-right,.slide-right>.content-body,.slide-top,.slide-top>.content-body,.toggle,.toggle>.content-body {
+  -webkit-transition: all 0 cubic-bezier(0.25,.46,.45,.94);
+  -o-transition: all 0 cubic-bezier(0.25,.46,.45,.94);
+  transition: all 0 cubic-bezier(0.25,.46,.45,.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25,.46,.45,.94);
+  -o-transition-timing-function: cubic-bezier(0.25,.46,.45,.94);
+  transition-timing-function: cubic-bezier(0.25,.46,.45,.94);
+}
+
+.toggle.ng-enter,.toggle>.content-body.ng-enter {
+  opacity: 0;
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+}
+
+.toggle.ng-enter-active,.toggle>.content-body.ng-enter-active {
+  opacity: 1;
+}
+
+.toggle.ng-leave,.toggle>.content-body.ng-leave {
+  opacity: 1;
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+}
+
+.toggle.ng-leave-active,.toggle>.content-body.ng-leave-active {
+  opacity: 0;
+}
+
+.toggle.ng-hide-add,.toggle>.content-body.ng-hide-add {
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.toggle.ng-hide-add.ng-hide-add-active,.toggle>.content-body.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}
+
+.toggle.ng-hide-remove,.toggle>.content-body.ng-hide-remove {
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block!important;
+  opacity: 0;
+}
+
+.toggle.ng-hide-remove.ng-hide-remove-active,.toggle>.content-body.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.slide-top.ng-enter,.slide-top>.content-body.ng-enter {
+  -o-transform: translateY(60px);
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 0;
+}
+
+.slide-top.ng-enter-active,.slide-top>.content-body.ng-enter-active {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-top.ng-leave,.slide-top>.content-body.ng-leave {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-top.ng-leave-active,.slide-top>.content-body.ng-leave-active {
+  -o-transform: translateY(60px);
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  opacity: 0;
+}
+
+.slide-top.ng-hide-add,.slide-top>.content-body.ng-hide-add {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-top.ng-hide-add.ng-hide-add-active,.slide-top>.content-body.ng-hide-add.ng-hide-add-active {
+  -o-transform: translateY(60px);
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  opacity: 0;
+}
+
+.slide-top.ng-hide-remove,.slide-top>.content-body.ng-hide-remove {
+  -o-transform: translateY(60px);
+  transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block!important;
+  opacity: 0;
+}
+
+.slide-top.ng-hide-remove.ng-hide-remove-active,.slide-top>.content-body.ng-hide-remove.ng-hide-remove-active {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-right.ng-enter,.slide-right>.content-body.ng-enter {
+  -o-transform: translateX(60px);
+  transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  -webkit-transform: translateX(60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 0;
+}
+
+.slide-right.ng-enter-active,.slide-right>.content-body.ng-enter-active {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-right.ng-leave,.slide-right>.content-body.ng-leave {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-right.ng-leave-active,.slide-right>.content-body.ng-leave-active {
+  -o-transform: translateX(60px);
+  transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  -webkit-transform: translateX(60px);
+  opacity: 0;
+}
+
+.slide-right.ng-hide-add,.slide-right>.content-body.ng-hide-add {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-right.ng-hide-add.ng-hide-add-active,.slide-right>.content-body.ng-hide-add.ng-hide-add-active {
+  -o-transform: translateX(60px);
+  transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  -webkit-transform: translateX(60px);
+  opacity: 0;
+}
+
+.slide-right.ng-hide-remove,.slide-right>.content-body.ng-hide-remove {
+  -o-transform: translateX(60px);
+  transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  -webkit-transform: translateX(60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block!important;
+  opacity: 0;
+}
+
+.slide-right.ng-hide-remove.ng-hide-remove-active,.slide-right>.content-body.ng-hide-remove.ng-hide-remove-active {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-left.ng-enter,.slide-left>.content-body.ng-enter {
+  -o-transform: translateX(-60px);
+  transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  -webkit-transform: translateX(-60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 0;
+}
+
+.slide-left.ng-enter-active,.slide-left>.content-body.ng-enter-active {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-left.ng-leave,.slide-left>.content-body.ng-leave {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-left.ng-leave-active,.slide-left>.content-body.ng-leave-active {
+  -o-transform: translateX(-60px);
+  transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  -webkit-transform: translateX(-60px);
+  opacity: 0;
+}
+
+.slide-left.ng-hide-add,.slide-left>.content-body.ng-hide-add {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-left.ng-hide-add.ng-hide-add-active,.slide-left>.content-body.ng-hide-add.ng-hide-add-active {
+  -o-transform: translateX(-60px);
+  transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  -webkit-transform: translateX(-60px);
+  opacity: 0;
+}
+
+.slide-left.ng-hide-remove,.slide-left>.content-body.ng-hide-remove {
+  -o-transform: translateX(-60px);
+  transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  -webkit-transform: translateX(-60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block!important;
+  opacity: 0;
+}
+
+.slide-left.ng-hide-remove.ng-hide-remove-active,.slide-left>.content-body.ng-hide-remove.ng-hide-remove-active {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-down.ng-enter,.slide-down>.content-body.ng-enter {
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -webkit-transform: translateY(-60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 0;
+}
+
+.slide-down.ng-enter-active,.slide-down>.content-body.ng-enter-active {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-down.ng-leave,.slide-down>.content-body.ng-leave {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-down.ng-leave-active,.slide-down>.content-body.ng-leave-active {
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -webkit-transform: translateY(-60px);
+  opacity: 0;
+}
+
+.slide-down.ng-hide-add,.slide-down>.content-body.ng-hide-add {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  opacity: 1;
+}
+
+.slide-down.ng-hide-add.ng-hide-add-active,.slide-down>.content-body.ng-hide-add.ng-hide-add-active {
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -webkit-transform: translateY(-60px);
+  opacity: 0;
+}
+
+.slide-down.ng-hide-remove,.slide-down>.content-body.ng-hide-remove {
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -webkit-transform: translateY(-60px);
+  -o-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  display: block!important;
+  opacity: 0;
+}
+
+.slide-down.ng-hide-remove.ng-hide-remove-active,.slide-down>.content-body.ng-hide-remove.ng-hide-remove-active {
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
+
+.pagination {
+  border-radius: 2px;
+}
+
+.pagination>li:first-child>a,.pagination>li:first-child>span {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.pagination>li:last-child>a,.pagination>li:last-child>span {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.panel {
+  border: 1px solid #dbdfe3;
+  border-radius: 2px;
+}
+
+.panel-heading {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.panel-title {
+  line-height: normal;
+  font-size: 14px;
+  color: inherit;
+}
+
+.panel-group .panel {
+  border-radius: 2px;
+}
+
+.popover {
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  border: 1px solid #dbdfe3;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.popover-title {
+  font-size: 13px;
+  border-bottom: #dbdfe3;
+  border-radius: 1px 1px 0 0;
+}
+
+.popover.top>.arrow {
+  border-top-color: #dbdfe3;
+}
+
+.popover.right>.arrow {
+  border-right-color: #dbdfe3;
+}
+
+.popover.bottom>.arrow {
+  border-bottom-color: #dbdfe3;
+}
+
+.popover.left>.arrow {
+  border-left-color: #dbdfe3;
+}
+
+.progress {
+  background-color: #dbdfe3;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.progress.progress-md {
+  height: 14px;
+  border-radius: 2px;
+}
+
+.progress.progress-sm {
+  height: 10px;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.progress.progress-xs {
+  height: 6px;
+  border-radius: 2px;
+}
+
+.progress-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.progress-bar-success {
+  background-color: #4caf50;
+}
+
+.progress-bar-info {
+  background-color: #00bcd4;
+}
+
+.progress-bar-warning {
+  background-color: #ffeb3b;
+}
+
+.progress-bar-danger {
+  background-color: #f44336;
+}
+

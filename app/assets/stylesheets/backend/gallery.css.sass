@@ -1,0 +1,180 @@
+@import 'compass/css3/images'
+@import 'compass/css3/transform'
+@import 'compass/utilities/general/clearfix'
+
+$color-white: #ffffff
+$color-black: #000000
+$color-red: #d12610
+$color-yellow: #FF6700
+$color-green-meadow: #1bbc9b
+$color-green: #35aa47
+$color-blue: #17acff
+$color-blue-grey: #8d9eab
+
+$sidebar-width: 235px
+$page-content-padding: 15px
+
+
+.album-photos-uploader
+
+  $image-size: 260px
+  .thumbnails-list
+    @include clearfix()
+  .thumbnail
+    float: left
+    position: relative
+    width: $image-size + 10px
+    margin: 0 16px 16px 0
+
+    .image-container
+      position: relative
+
+      img
+        width: $image-size
+        height: $image-size
+
+      .overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        @include background(linear-gradient(rgba(#000, 0.6), rgba(#000, 0)))
+
+      .make-main-container
+        display: none
+        position: absolute
+        left: 10px
+        top: 10px
+        i
+          color: $color-white
+          text-shadow: 0 1px 1px rgba(#000, 0.7)
+          font-size: 24px
+        a
+          color: $color-white
+          text-shadow: 0 1px 1px rgba(#000, 0.7)
+
+
+
+      .action-buttons
+        position: absolute
+        right: 10px
+        top: 10px
+        text-align: right
+        z-index: 10
+
+        a
+          margin-left: 6px
+
+        .remove-button
+          i
+            font-size: 24px
+            color: #fff
+            text-shadow: 0 1px 2px rgba(#000, 0.4)
+
+          &:hover
+            i
+              color: #eee
+
+      .favourite-container
+        position: absolute
+        top: 16px
+        left: 10px
+
+        a.favourite-button
+          color: $color-yellow
+
+          &:hover
+            color: lighten($color-yellow, 3%)
+          i
+            font-size: 28px
+
+      .check-container
+        position: absolute
+        left: 14px
+        bottom: 16px
+
+        text-align: right
+        input
+          @include transform(scale(1.3))
+
+
+    .text-fields
+      z-index: 10
+      height: 110px
+
+      .title, .description
+        position: relative
+
+      .title
+        font-size: 16px
+
+      .description
+        padding-top: 8px
+
+      .photographer
+        padding-top: 5px
+
+
+  .progress
+    margin-bottom: 0
+
+  .drop-zone
+    position: relative
+    text-align: center
+    $border_radius: 10px
+    border: dashed 2px #ccc
+
+    input[type=file]
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0
+      cursor: pointer
+
+    .progress
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+
+    .action-caption
+      .drag-text
+        margin-top: 20px
+        text-align: center
+        font-size: 1.3em
+        color: #555
+
+      .help-text
+        margin-top: 8px
+        margin-bottom: 8px
+        text-align: center
+        color: #999
+
+
+  .all-photos-actions
+    margin: 4px 0 10px
+
+.photos-list
+  .thumbnail
+    border: none
+  .caption
+    height: 60px
+  .row
+    padding-top: 30px
+  .favourite-container
+    color: #f3c200
+  .album-info span
+    padding: 10px
+    color: #808080
+    font-size: 18px
+  i
+    font-size: 24px
+
+  .comments
+    li
+      background: #f2f2f2
+      .col1
+        padding: 10px

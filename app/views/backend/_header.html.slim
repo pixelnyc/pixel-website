@@ -1,0 +1,12 @@
+header#app-header.navbar
+  .navbar-nocollapse.clearfix.ng-scope
+    ul.nav.navbar-nav.navbar-left
+      li
+        = link_to :back do
+          i.ai.fs-28.pos-t-5.ai-arrow-back
+
+    ul.nav.navbar-nav.navbar-right
+
+      li
+        = link_to destroy_admin_user_session_path do
+          span.ai.ai-input.fs-22.pos-t-4

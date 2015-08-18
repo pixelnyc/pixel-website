@@ -1,0 +1,29 @@
+- content_for(:title) { "#{AdminUser.model_name.human} ##{@user.email}" }
+.page-header
+  .btn-toolbar.pull-right
+    .btn-group
+      = back_to_list_button backend_admin_users_path
+      = edit_item_button edit_backend_admin_user_path(@user)
+      = remove_item_button backend_admin_user_path(@user)
+  h3
+    => "User #{@user.email}"
+= render 'backend/shared/flash_messages', flash: flash
+.pa-md
+  .row
+    .col-md-12
+      .panel
+        .panel-body
+          .field
+            | #{AdminUser.human_attribute_name('id')}: #{@user.id}
+          .field
+            | #{AdminUser.human_attribute_name('email')}: #{@user.email}
+          .field
+            | #{AdminUser.human_attribute_name('sign_in_count')}: #{@user.sign_in_count}
+          .field
+            | #{AdminUser.human_attribute_name('current_sign_in_at')}: #{I18n.l @user.current_sign_in_at, format: :short}
+          .field
+            | #{AdminUser.human_attribute_name('current_sign_in_ip')}: #{@user.current_sign_in_ip}
+          .field
+            | #{AdminUser.human_attribute_name('created_at')}: #{I18n.l @user.created_at, format: :short}
+          .field
+            | #{AdminUser.human_attribute_name('updated_at')}: #{I18n.l @user.updated_at, format: :short}

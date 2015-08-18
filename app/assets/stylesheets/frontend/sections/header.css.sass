@@ -1,0 +1,189 @@
+@import 'compass/css3'
+@import 'frontend/variables'
+
+$animation-duration: 0.5s
+
+header.header
+  @include transition(menubackground-color 0.5s)
+  height: 65px
+  pointer-events: none
+
+  z-index: 20
+
+  $menu-items-slide-time: 0.3s
+  .logo
+    @include transition(top $menu-items-slide-time)
+    display: block
+    position: absolute
+    top: -40px
+    left: 22px
+    z-index: 10
+
+    background: image-url('pixel-logo-black.svg')
+    width: 100px
+    height: 40px
+
+  $block-transition: 0.3s
+
+  .navigation
+    font-weight: bold
+    .menu-toggle-icon
+      @include transition(top $menu-items-slide-time)
+      height: 33px
+      width: 33px
+      cursor: pointer
+      margin: 0 auto
+      display: block
+
+      position: absolute
+      top: -37px
+      right: 30px
+
+      .line
+        @include transition(background-color 0.5s ease-in-out)
+        @include border-radius(2px)
+
+        background: #000
+
+        margin-top: 3px
+        width: 33px
+        height: 4px
+        position: absolute
+
+        &.two
+          margin-top: 13px
+        &.three
+          margin-top: 23px
+
+    .overlay
+      @include transition(opacity 0.3s)
+      position: fixed
+      width: 100%
+      height: 100%
+      background-color: rgba(#080B11, 0.8)
+      opacity: 0
+      pointer-events: none
+
+    ul.menu
+      @include transition(opacity 0.3s, top 0.4s)
+      pointer-events: none
+
+      position: absolute
+      top: 120px
+      right: 22px
+
+      opacity: 0
+      z-index: 11
+      h2
+        margin: 0
+
+      li
+        list-style: none
+        margin: 28px 0
+        text-align: right
+        a
+          color: #ffffff
+          font-size: 45px
+          @include transition(color $block-transition)
+
+          &:hover
+            color: $color-yellow
+
+    &.active
+      .menu-toggle-icon
+        .line
+          background: $color-yellow
+          @include transition(color 0.3s)
+
+          $animation-duration: 0.7s
+          &.one
+            @include animation(menu-icon-layer-one $animation-duration)
+            @include animation-fill-mode(forwards)
+
+          &.two
+            @include animation(menu-icon-layer-two $animation-duration)
+            @include animation-fill-mode(forwards)
+
+          &.three
+            @include animation(menu-icon-layer-three $animation-duration)
+            @include animation-fill-mode(forwards)
+
+      .overlay
+        opacity: 1
+      .logo
+        color: #ffffff
+
+      ul.menu
+        top: 150px
+        opacity: 1
+        pointer-events: auto
+
+    &.closed
+      .menu-toggle-icon
+        .line
+
+          $animation-duration: 0.7s
+          &.one
+            @include animation-name(menu-icon-layer-one-alternate)
+            @include animation-duration($animation-duration)
+            @include animation-fill-mode(forwards)
+
+          &.two
+            @include animation-name(menu-icon-layer-two-alternate)
+            @include animation-duration($animation-duration)
+            @include animation-fill-mode(forwards)
+
+          &.three
+            @include animation-name(menu-icon-layer-three-alternate)
+            @include animation-duration($animation-duration)
+
+            @include animation-fill-mode(forwards)
+
+  &.active
+    pointer-events: all
+
+    .logo
+      top: 12px
+
+    .navigation
+      .menu-toggle-icon
+        top: 16px
+
+    &.with-back
+      background: rgba($color-yellow, 0.85)
+
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collaps
+  max-height: 100%
+
+@media(max-width: 768px)
+  header.header
+    height: 60px
+
+    .logo
+      top: 10px
+      left: 16px
+
+    .navigation
+      ul.menu
+        top: 40px
+        right: 20px
+        li
+          margin: 20px 0
+          a
+            font-size: 32px
+      .menu-toggle-icon
+        top: 14px
+        right: 20px
+
+    &.active
+      .logo
+        top: 10px
+        .menu-toggle-icon
+          top: 14px
+
+      .navigation
+        ul.menu
+          top: 60px
+        .menu-toggle-icon
+          top: 14px

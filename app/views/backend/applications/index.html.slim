@@ -1,0 +1,29 @@
+- content_for(:title) { 'Applications' }
+.page-header
+  h3
+    ' Applications
+    small List
+
+.table-responsive
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th.w-40 Id
+        th Name
+        th Email
+        /th Position
+        /th Location
+        th.actions
+    tbody
+      - @applications.each do |application|
+        tr
+          td= application.id
+          td= link_to "#{application.first_name} #{application.first_name}", backend_application_path(application)
+          td= application.email
+          /td= application.vacancy.position
+          /td= application.location
+          td=
+          td.text-right
+            .btn-group.toolbar
+              = show_table_item_button backend_application_path(application)
+              = remove_table_item_button backend_application_path(application)

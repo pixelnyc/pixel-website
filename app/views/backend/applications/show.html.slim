@@ -1,0 +1,45 @@
+- content_for(:title) { 'Application' }
+.page-header
+  h3
+    ' Application from #{@application.first_name} #{@application.last_name}
+.pa-md
+  dl
+    dt Name:
+    dd = "#{@application.first_name} #{@application.last_name}"
+    br
+
+    /dt Position:
+    /dd = @application.vacancy.position
+    /br
+    /dt Location:
+    /dd = @application.location
+    /br
+
+    dt Email:
+    dd = @application.email
+    br
+
+    dt Phone:
+    dd = @application.phone
+    br
+
+    dt Website:
+    dd = @application.website
+    br
+
+    dt Linkedin URL:
+    dd = @application.linkedin_url
+    br
+
+    dt Portfolio URL:
+    dd = @application.portfolio_url
+    br
+
+    - if @application.cover_letter.present?
+      dt Cover Letter
+      dd = link_to 'Link', @application.cover_letter.url
+      br
+
+    - if @application.resume.present?
+      dt Resume
+      dd = link_to 'Link', @application.resume.url

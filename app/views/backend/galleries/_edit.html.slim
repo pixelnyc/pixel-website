@@ -1,0 +1,23 @@
+- if "galleryId=#{gallery_id}"
+  #photos-list.form ng-init="galleryId=#{gallery_id}"
+    .album-photos-uploader(ng-controller="GalleryController" uploader="uploader" nv-file-drop)
+
+      .well.drop-zone nv-file-over="true" uploader="uploader"
+        .action-caption
+          a.btn.btn-success.btn-lg(href="") Add photos
+          .drag-text or drag them here
+          .help-text jpg, jpeg, gif, png
+
+        input nv-file-select="true" type="file" multiple="true" uploader="uploader"
+
+        .progress ng-show="showProgressBar"
+          .progress-bar role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"
+
+      .thumbnails-list ng-model="photos" ui-sortable="sortableOptions"
+        .thumbnail(ng-repeat="p in photos")
+          .image-container
+            img ng-src="{{p.thumbUrl}}"
+            .overlay
+            .action-buttons
+              a.remove-button.btn.btn-xs href="" ng-click="removePhoto(p)"
+                i.fa.fa-times

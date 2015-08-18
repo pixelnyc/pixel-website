@@ -1,0 +1,8 @@
+- content_for(:title) { 'Article Editing' }
+.page-header
+  h3
+    ' News
+    small editing #{@news_article.title}
+
+.pa-md
+  = render 'form'

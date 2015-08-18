@@ -1,0 +1,7 @@
+= link_to frontend_project_path(@project), class: 'grid-block'
+  /= image_tag 'square-stub-white.svg', class: 'image-stub st'
+  = image_tag @project.tile_cover.url(:main), class: 'cover'
+  .overlay
+  .content-container
+    .section Work
+    h2.title= @project.name

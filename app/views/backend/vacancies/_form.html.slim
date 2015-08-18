@@ -1,0 +1,10 @@
+= simple_form_for [:backend, @vacancy], html: { class: 'form panel form-vertical' }, wrapper: :vertical_form do |f|
+  .panel-body
+    = f.input :position, placeholder: 'Position, eg. Lead Designer'
+
+    = f.input :location, as: :select, collection: Vacancy.locations.map {|l| [l[0], l[1]] }
+
+    = f.input :content, as: :text, input_html: { summernote: true }
+
+  .panel-footer
+    = form_buttons f, cancel_path: backend_vacancies_path

@@ -1,0 +1,5 @@
+.container-fluid.recent-cases
+  .row
+    - @projects.each do |project|
+      .col-sm-4.col-xs-12
+        = render_cell :project_tile, :show, project: project

@@ -1,0 +1,43 @@
+- content_for(:title) { 'Project' }
+.page-header
+  .btn-toolbar.pull-right
+    .btn-group
+      = link_to new_backend_project_path, class: 'btn btn-lg btn-success' do
+        i.fa.fa-plus
+  h3
+    ' Projects
+    small list
+
+= search_form_for @q, url: backend_projects_path, class: 'filter-form' do |f|
+  .input-group
+    = f.text_field :name_or_description_cont, class: 'form-control', placeholder: 'Search by name, description', type: 'search'
+    span.input-group-btn
+      button.btn.btn-success type="button"
+        i.fa.fa-search
+
+.table-responsive
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th.w-40 ID
+        th Cover
+        th Name
+        th Description
+        th In Carousel?
+        th.actions
+    tbody
+      - @projects.each do |project|
+        tr
+          td= project.id
+          td= image_tag project.tile_cover.url(:backend_thumb)
+          td= link_to project.name, edit_backend_project_path(project)
+          td= truncate(project.description, length: 120)
+          td.center
+            i.fa class="#{project.in_carousel ? 'fa-check' : 'fa-times'}"
+          td.text-right
+            .btn-group.toolbar
+              = edit_table_item_button edit_backend_project_path(project)
+              = remove_table_item_button backend_project_path(project)
+
+
+= paginate_list @projects

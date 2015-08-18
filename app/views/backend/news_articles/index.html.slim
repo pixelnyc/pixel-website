@@ -1,0 +1,41 @@
+- content_for(:title) { 'News' }
+.page-header
+  .btn-toolbar.pull-right
+    .btn-group
+      = link_to new_backend_news_article_path, class: 'btn btn-lg btn-success' do
+        i.fa.fa-plus
+  h3
+    ' News
+    small list
+
+= search_form_for @q, url: backend_news_articles_path, class: 'filter-form' do |f|
+  .input-group
+    = f.text_field :title_or_readout_or_content_cont, class: 'form-control', placeholder: 'Search by title, author', type: 'search'
+    span.input-group-btn
+      button.btn.btn-success type="button"
+        i.fa.fa-search
+
+.table-responsive
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th.w-40 ID
+        th Title
+        th Readout
+        th Published?
+        th.actions
+    tbody
+      - @news_articles.each do |news_article|
+        tr
+          td= news_article.id
+          td= link_to news_article.title, edit_backend_news_article_path(news_article)
+          td= truncate(news_article.readout, length: 120)
+          td
+            i.fa class="#{news_article.published ? 'fa-check' : 'fa-times'}"
+          td.text-right
+            .btn-group.toolbar
+              = edit_table_item_button edit_backend_news_article_path(news_article)
+              = remove_table_item_button backend_news_article_path(news_article)
+
+
+= paginate_list @news_articles

@@ -1,0 +1,41 @@
+.row.form-careers-new.input-group-lg(data-application-form)
+  - class_names_mapping = {notice: 'success', error: 'danger', alert: 'warning'}
+
+  - flash.each do |type, message|
+    - type = type.to_sym
+    .app-alerts.alert.fade.in class="alert-#{class_names_mapping[type]}"
+      button type="button" class="close" data-dismiss="alert" aria-hidden="true"
+      =< message
+      - if @application && @application.errors.any?
+        ul
+          - @application.errors.each do |field_name, error|
+            li
+              | #{field_name} #{error}
+
+  = form_for [:frontend, @application], remote: true do |f|
+    .col-xs-12.col-sm-6.input-container
+      = f.text_field :first_name, class: 'form-control', placeholder: 'First name', required: true
+    .col-xs-12.col-sm-6.input-container
+      = f.text_field :last_name, class: 'form-control', placeholder: 'Last name', required: true
+    .col-xs-12.col-sm-6.input-container
+      = f.phone_field :phone, class: 'form-control', placeholder: 'Phone'
+    .col-xs-12.col-sm-6.input-container
+      = f.email_field :email, class: 'form-control', placeholder: 'E-mail', required: true
+
+    /.col-xs-12.col-sm-6.input-container
+      = f.file_field :resume, class: 'form-control file-input resume', placeholder: 'Attach Resume'
+      = image_tag 'icons/icon-file-attach.svg', class: 'icon-attach'
+    /.col-xs-12.col-sm-6.input-container
+      = f.file_field :cover_letter, class: 'form-control file-input cover-letter', placeholder: 'Attach Resume' do
+      = image_tag 'icons/icon-file-attach.svg', class: 'icon-attach'
+
+    .col-xs-12.col-sm-6.input-container
+      = f.text_field :portfolio_url, class: 'form-control', placeholder: 'Portfolio URL'
+    .col-xs-12.col-sm-6.input-container
+      = f.text_field :linkedin_url, class: 'form-control', placeholder: 'LinkedIn URL'
+
+    .col-xs-12.input-container
+      = f.text_field :website, class: 'form-control', placeholder: 'Website'
+
+    .col-xs-12.input-container
+      = f.submit 'Apply'

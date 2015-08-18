@@ -1,0 +1,8 @@
+- content_for(:title) { 'Project Editing' }
+.page-header
+  h3
+    ' Projects
+    small editing #{@project.name}
+
+.pa-md
+  = render 'form'

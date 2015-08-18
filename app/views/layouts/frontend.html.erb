@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="FrontendApp">
+<head>
+  <%= render 'frontend/meta' %>
+  <%= stylesheet_link_tag    'frontend', media: 'all' %>
+  <%= javascript_include_tag 'frontend' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= yield(:body_class) %>">
+    <%= render 'frontend/header' %>
+    <%= yield %>
+
+    <%= render 'frontend/footer'  %>
+    <%= render 'frontend/stats'  %>
+
+</body>
+</html>

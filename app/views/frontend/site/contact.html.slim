@@ -1,0 +1,63 @@
+script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPbKuT7t4LRnkpaFLlR7aja73v-7te15w&sensor=false"
+//CONTACT
+.contact-us.container
+
+  .main-info
+    .title-contact
+      h1
+        | Call. We’re All Ears.
+    .contact-types
+      .row
+        .col-md-4.item
+          a.title href=""
+            | New Business
+          = link_to 'newbusiness@pixel-nyc.com', 'mailto:newbusiness@pixel-nyc.com', class: 'link'
+        .col-md-4.item.line
+          a.title href=""
+            | Media/Press
+          = link_to 'press@pixel-nyc.com', 'mailto:press@pixel-nyc.com', class: 'link'
+        .col-md-4.item
+          a.title href=""
+            | Careers
+          = link_to 'jobs@pixel-nyc.com', 'mailto:jobs@pixel-nyc.com', class: 'link'
+  .our-offices
+    | Our Offices
+    .icon-arrow
+      = image_tag 'icons/icon-arrow.svg'
+  .locations
+    .offices
+      .row
+        .col-md-6.col-sm-12.col-xs-12
+          .locations-img
+            a.thumbnail href=""
+              .overlay-info-contact
+                .city-offices
+                  p.title NEW YORK
+              = image_tag 'site/contact/contact1.jpg'
+            .text-offices
+              .info-offices
+                .address 568 Broadway, 11th Floor NY, NY 10012
+                = link_to 'nick@pixel-nyc.com', 'mailto:nick@pixel-nyc.com', class: 'link'
+                = link_to '+1-917-969-4461', 'tel:+19179694461', class: 'link'
+              a.get-directions target="_blank" href="https://www.google.com/maps/place/568+Broadway,+New+York,+NY+10012,+USA/@40.7242802,-73.9973541,17z/data=!3m1!4b1!4m2!3m1!1s0x89c2598ee26c84db:0xc3e71c7bf935f26c"
+                | GET DIRECTIONS.
+        .col-md-6.col-sm-12.col-xs-12
+          .locations-img
+            a.thumbnail href=""
+              .overlay-info-contact
+                .city-offices
+                  p.title LONDON
+              .overlay-info-contact
+              = image_tag 'site/contact/contact2.jpg'
+            .text-offices
+              .info-offices
+                .address
+                  | 68 - 80 Hanbury St London, E1 5JL
+                = link_to 'george@pixel-nyc.com', 'mailto:george@pixel-nyc.com', class: 'link'
+                = link_to '+44-0750-719-7286', 'tel:4407507197286', class: 'link'
+              a.get-directions target="_blank" href="https://www.google.com/maps/place/68-80+Hanbury+St,+London+E1+5JL,+UK/@51.5202136,-0.0711258,16z/data=!4m2!3m1!1s0x48761cb5fd76a2bd:0x54b079b57e738077"
+                | GET DIRECTIONS.
+
+
+
+/= render 'action_button'

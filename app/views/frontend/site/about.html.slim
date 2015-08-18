@@ -1,0 +1,151 @@
+.about.container-fluid
+  .container.top-video-container
+    video.bg.hidden-xs autoplay="autoplay" loop="loop" muted="false" poster="#{ asset_path 'about-us-cover.jpg' }"
+      source type="video/mp4" src="https://s3.amazonaws.com/pixel-website-videos/about-us-top.mp4"
+    = image_tag 'about-us-cover.jpg', class: 'bg visible-xs'
+    .overlay
+
+    h1 Not Just Ideas.
+
+
+  .container
+    .who-we-are.section-text-block.section-block
+      h2 Who We Are.
+      p.text Pixel is a lean, creative, award-winning digital agency with an insatiable thirst for beautiful design and a no-nonsense approach to getting things done.
+      p.text We are artists and thinkers. Coders and ﬁne-tuners. Writers and directors. Experts in technology and branding connoisseurs. Our energetic team pull problems apart, tease out solutions, build out from the back-end and then wrap our projects up with a bow.
+
+  .container
+    .row.container-section-block
+      .col-md-6.col-sm-12.col-xs-12
+        .content-block
+          h2 What We Do.
+          p.text
+            | We could say that we build beautiful websites, addictive apps, engaging films, inventive content and powerful social media campaigns - all driven by a ruthless commitment to design that blows minds.
+          p.text
+            | But what we really do is help companies understand the digital world, seek out lost opportunities, capitalize on existing opportunities and invent new products that captivate their customers.
+
+      .col-md-6.col-sm-12.col-xs-12.line
+        .content-block
+          h2 What We Think.
+          p.text We believe that the secret behind captivating an audience and leading them down your path lies in creative storytelling. That means surprising and delighting consumers with rich, beautiful content at every touch point.
+          p.text Whether that’s an app they can’t put down, a ﬁlm that moves them, a tablet experience that inspires them or a website that keeps them coming back for more. Stories leave a mark that stand the test of time.
+
+  .container
+    .roadmap.content-block.section-block
+      .roadmap-container
+        h2 Roadmap.
+        = image_tag 'roadmap.png'
+
+  .container
+    .section-text-block.section-block
+      h2 Why Our Model Works.
+      p.text Our organizational structure is ﬂat, collaborative and highly effective. Ask any of our clients. We’ve done away with layers of unnecessary account management and enlisted passionate, multi-talented producers to work directly with our clients from brief to delivery.
+      p.text Simply put, this means better work, delivered faster, for less money. Just like our namesake, our teams are small but perfectly formed.
+
+  /.container
+    .team.section-text-block
+      h2 Our Team
+      h3.text Work Hard, Play harder
+
+  /.container
+    .row.team-members
+      .col-sm-4.col-xs-12.member
+        = image_tag 'about-member-1.jpg', class: 'section-image'
+        .overlay
+        .content
+          .name Nick
+          .descr Lorem ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem
+
+      .col-sm-4.col-xs-12.member
+        = image_tag 'about-member-2.jpg', class: 'section-image'
+        .overlay
+        .content
+          .name George
+          .descr Lorem ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem
+
+      .col-sm-4.col-xs-12.member
+        = image_tag 'about-member-3.jpg', class: 'section-image'
+        .overlay
+        .content
+          .name Artem
+          .descr Lorem ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem  ipsum lorem
+
+  .container
+    #services.services.section-text-block
+      h2 Services.
+
+      .services-list
+        .row
+          .col-sm-6.col-xs-12.service.left
+            h4.name Business Strategy
+            .descr Market Opportunity Analysis, Business and Product Innovation, Organization Planning and Development, Partnership Strategy, Vendor Selection and Management.
+          .col-sm-6.col-xs-12.service.right
+            h4.name User Experience Design
+            .descr Omnichannel Design, Digital In-Store Design, Product Creation, Responsive, App & Mobile Design.
+        .row
+          .col-sm-6.col-xs-12.service.left
+            h4.name Social
+            .descr Social Media & PR, Community Management, Influencer Engagement, Media Relations, Measurement & Analytics.
+          .col-sm-6.col-xs-12.service.right
+            h4.name Brand Planning
+            .descr Integrated Marketing Strategy, Brand Strategy, Digital Brand Translation.
+        .row
+          .col-sm-6.col-xs-12.service.left
+            h4.name Creative
+            .descr Integrated Campaigns, Copywriting, Editorial Services, Live-Action Production, Motion Graphics & Animation, Art Production, Design Production.
+          .col-sm-6.col-xs-12.service.right
+            h4.name SEO + Inbound Marketing
+            .descr On-Page Strategy, Competitive Inbound Analysis, Search Social Strategy, Local Optimization, Paid Search.
+
+        .row
+          .col-sm-6.col-xs-12.service.left
+            h4.name Data Science
+            .descr Consumer Data Analytics, Strategy & Implementation, Marketing, Social & CRM Analytics, Data Visualization, Data Strategy.
+          .col-sm-6.col-xs-12.service.right
+            h4.name Technology
+            .descr Mobile & Multiplatform Apps, E-Commerce, Digital In-Store, Web Applications, Content Management Systems, Emerging Platforms, Gesture Recognition.
+
+        .row
+          .col-sm-6.col-xs-12.service.left
+            h4.name Research
+            .descr In-Person Observational Research, Online Community Research, Mobile Qualitative Research, Usability Testing, Market Segmentation.
+          .col-sm-6.col-xs-12.service.right
+            h4.name Content
+            .descr Brand Publishing, Information Strategy, Publishing Management, Content Development.
+        .row
+          .col-sm-6.col-xs-12.service.left
+            h4.name CRM
+            .descr Loyalty Initiatives, Customer Lifetime Value (CLV) Management, Segment Development and Evaluation, Marketing Automation, Customer Data Management.
+          .col-sm-6.col-xs-12.service.right
+            h4.name Display
+            .descr IAB Banners, Rich Media, Mobile, HTML5
+
+
+  .container
+    .clients.section-text-block
+      h2.title Our Clients.
+
+      .list.row
+        .col-md-4.col-sm-6.col-xs-12.client.border-right.border-bottom
+          .image-container
+            = image_tag 'clients/marilyn-monroe.png'
+        .col-md-4.col-sm-6.col-xs-12.client.border-right.border-bottom
+          .image-container
+            = image_tag 'clients/pg.png'
+        .col-md-4.col-sm-6.col-xs-12.client.border-bottom
+          .image-container
+            = image_tag 'clients/john-varvatos-logo.png'
+
+        .col-md-4.col-sm-6.col-xs-12.client.border-right
+          .image-container
+            = image_tag 'clients/white-wall.png'
+        .col-md-4.col-sm-6.col-xs-12.client.border-right
+          .image-container
+            = image_tag 'clients/bottega-veneta.png'
+        .col-md-4.col-sm-6.col-xs-12.client
+          .image-container
+            = image_tag 'clients/nomad.png'
+
+
+  /= render 'action_button'
+

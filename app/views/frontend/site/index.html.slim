@@ -1,0 +1,40 @@
+- content_for(:body_class) { 'gallery' }
+
+.home
+  = widget :projects_carousel
+
+  .main
+    .container.main-message
+      .quote
+        .quote-text The greatest source of creativity is a timeline & a budget
+        .quote-author - Frank Gehry
+
+    .container.main-content.home(data-main-content)
+      .tails-wrapper
+        .row
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+
+          .col-md-3.col-sm-6.col-xs-12 = widget :news_tile, :show, article: @latest_news_articles.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :news_tile, :show, article: @latest_news_articles.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+          .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+
+        - if @latest_projects.any?
+          .row
+            - 4.times do |item|
+              .col-md-3.col-sm-6.col-xs-12 = widget :project_tile, :show, project: @latest_projects.shift
+
+    .container
+      = link_to frontend_projects_path, class: 'view-more-works' do
+        | View more Works
+        = image_tag 'icons/icon-double-right.svg', class: 'icon icon-right'
+
+
+
+    /= render 'frontend/action_button'
+
+  = render 'frontend/footer'

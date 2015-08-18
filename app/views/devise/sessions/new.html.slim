@@ -1,0 +1,24 @@
+container
+  .row
+    .col-md-4.col-sm-6.col-md-offset-4.col-sm-offset-3
+      .pt-lg.pb-lg
+        .text-center
+          a.brand.brand-lg.mb-sm href=""
+            span.brand-figure
+          h3.fw-b.text-muted Pixel
+          p.text-muted.fs-14.fw-sb Content Management System area
+      .panel
+        = render 'devise/shared/errors'
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'panel-body form-horizontal' }) do |f|
+          .form-group.form-stack
+            .col-md-12
+              = f.email_field :email, autofocus: true, class: 'form-control input-lg fs-base', placeholder: 'Your email'
+              .form-control-icon.form-control-icon-right
+                = f.password_field :password, autocomplete: "off", class: 'form-control input-lg fs-base', placeholder: 'Your password'
+          .form-group.mb-0
+            .col-xs-12
+              .box-layout
+                - if devise_mapping.rememberable?
+                  = f.input :remember_me, wrapper: :bootstrap_switch, as: :bootstrap_switch
+                .col-xs-6.text-right.va-m
+                  = f.submit 'Sign In', class: 'btn btn-lg btn-primary'

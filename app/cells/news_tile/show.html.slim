@@ -1,0 +1,10 @@
+= link_to frontend_news_article_path(@news_article), class: 'journal-block' do
+  = image_tag 'square-stub-white.svg', class: 'image-stub'
+
+  .content-info
+    .specification
+      spa.section JOURNAL
+      span.delimiter
+        | /
+      span.date = l @news_article.created_at, format: :short
+    h2.title = @news_article.title

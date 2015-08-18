@@ -1,0 +1,38 @@
+footer
+
+  .row
+    .col-md-7.col-xs-12
+      .contact
+        .location NEW YORK
+        .contact-data
+          = link_to '+1-917-969-4461', 'tel:+19179694461', class: 'link'
+          = link_to 'nick@pixel-nyc.com', 'mailto:nick@pixel-nyc.com', class: 'link'
+      .contact
+        .location LONDON
+        .contact-data
+          = link_to '+44-0750-719-7286', 'tel:+4407507197286', class: 'link'
+          = link_to 'george@pixel-nyc.com', 'mailto:george@pixel-nyc.com', class: 'link'
+      /.contact
+        .location MINSK
+        .contact-data
+          = link_to '+375-29-6-404-600', 'tel:+375296404600', class: 'link'
+          = link_to 'artem@pixel-nyc.com', 'mailto:artem@pixel-nyc.com', class: 'link'
+    .col-md-5.col-xs-12
+      .navigation
+        = link_to 'WORK', frontend_projects_path
+        = link_to 'ABOUT', frontend_about_path
+        = link_to 'JOURNAL', frontend_news_articles_path
+        = link_to 'CAREERS', frontend_vacancies_path
+        = link_to 'CONTACT', frontend_contact_path
+
+      .social-icons
+        = link_to @settings[:facebook_link] do
+          i.fa.fa-facebook
+        = link_to @settings[:twitter_link] do
+          i.fa.fa-twitter
+        = link_to @settings[:instagram_link] do
+          i.fa.fa-instagram
+        = link_to @settings[:vimeo_link] do
+          i.fa.fa-vimeo-square
+
+  .copyright &copy; #{ Date.today.year } Pixel NYC. All rights reserved. The Pixel NYC Brand and logo are trademarks registered.

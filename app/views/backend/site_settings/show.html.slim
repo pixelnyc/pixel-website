@@ -1,0 +1,19 @@
+- content_for(:title) { t('pages.titles.site_settings') }
+.page-header
+  .btn-toolbar.pull-right
+    .btn-group
+      = back_to_list_button backend_site_settings_path(engine: @site_setting.prefix)
+      = edit_item_button edit_backend_site_setting_path(@site_setting)
+      = remove_item_button backend_site_setting_path(@site_setting)
+  h3
+    ' #{@site_setting.key}
+.panel
+  .panel-body
+    .field
+      | Key: #{@site_setting.key}
+    .field
+      | Value: #{@site_setting.value}
+    .field
+      | Engine: #{@site_setting.prefix}
+    .field
+      | Description: #{@site_setting.description}
